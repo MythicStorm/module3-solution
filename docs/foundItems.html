@@ -1,11 +1,4 @@
-test
-<!--
-<div >
-    <ul>
-      <li ng-repeat="category in menu.categories">
-        (<a href="">{{ category.short_name }}</a>)
-        {{ category.name }}
-      </li>
-    </ul>
-  </div>
-  -->
+
+<li ng-repeat="category in menu.menuItems">{{ category.name }}, {{ category.short_name}}, {{ category.description }}
+  <button ng-click="menu.removeMenuListItems($index)">Don't want this one!</button>
+</li>

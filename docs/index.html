@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-<body ng-app='MenuCategoriesApp'>
-   <div class="container" ng-controller='MenuCategoriesController as menu'>
+<body ng-app='NarrowItDownApp'>
+  <div class="container" ng-controller='NarrowItDownController as menu'>
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group">
@@ -19,13 +19,11 @@
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="menu.logMenuItems();">Narrow It Down For Me!</button>
     </div>
-
-    <!-- found-items should be implemented as a component -->
-    <!-- found-items="...." on-remove="...."-->
-    <!--<found-items></found-items>-->
-
-    <found-Items></found-Items>
+    <br>
+    <br>
+    <br>
+    <div ng-if = "menu.searchItemNotFound">Nothing found!</div>
+    <found-Items my-menu-items="menu.menuItems"></found-Items>
   </div>
-
 </body>
 </html>
